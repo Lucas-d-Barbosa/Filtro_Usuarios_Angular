@@ -3,7 +3,7 @@ import { AngularMaterialModule } from "../angular-material/angular-material.modu
 
 @NgModule({
     declarations: [
-
+        
     ],
 
     imports:[
@@ -11,7 +11,7 @@ import { AngularMaterialModule } from "../angular-material/angular-material.modu
     ],
 
     exports:[
-
+        AngularMaterialModule
     ]
 })
 export class ComponentsModule {}
