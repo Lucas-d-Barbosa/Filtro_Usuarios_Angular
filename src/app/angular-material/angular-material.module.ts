@@ -13,8 +13,9 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 
 import { MatSelectModule } from '@angular/material/select'; 
 
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 
+import { MatTableModule } from '@angular/material/table';
 @NgModule({
     imports: [
         MatListModule,
@@ -24,7 +25,8 @@ import {MatButtonModule} from '@angular/material/button';
         MatDatepickerModule,
         MatNativeDateModule,
         MatSelectModule,
-        MatButtonModule
+        MatButtonModule,
+        MatTableModule
         
     ],
     exports: [
@@ -35,7 +37,8 @@ import {MatButtonModule} from '@angular/material/button';
         MatDatepickerModule,
         MatNativeDateModule,
         MatSelectModule,
-        MatButtonModule
+        MatButtonModule,
+        MatTableModule
 
 
     ],
