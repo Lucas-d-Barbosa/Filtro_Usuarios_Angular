@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IUser } from './interfaces/user/user.interface';
+import { UsersList } from './data/users-list';
 
 
 @Component({
@@ -8,7 +9,9 @@ import { IUser } from './interfaces/user/user.interface';
   standalone: false,
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
+  
+  usersList : IUser[] = [];
   userSelected : IUser = {} as IUser;
   showUserDetails : boolean = false;
   selectedUser(newUser : IUser)
@@ -17,5 +20,11 @@ export class AppComponent {
     this.showUserDetails = true;
   }
 
+
+  ngOnInit() {
+    setTimeout(() => {
+      this.usersList = UsersList;
+    }, 3000);
+  }
  
 }
