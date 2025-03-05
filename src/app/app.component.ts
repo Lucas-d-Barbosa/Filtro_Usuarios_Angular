@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IUser } from './interfaces/user/user.interface';
 import { UsersList } from './data/users-list';
+import { IFilterOptions } from './interfaces/IFilterOptions';
 
 
 @Component({
@@ -25,6 +26,23 @@ export class AppComponent implements OnInit{
     setTimeout(() => {
       this.usersList = UsersList;
     }, 1);
+  };
+
+  onFilter(filter : IFilterOptions){
+    const startDate = filter.startDate;
+    const endDate = filter.endDate;
+    const status = filter.status;
+    const name = filter.name;
+    const newUserList: IUser[] = [];
+    for(let user of this.usersList)
+    {
+      const USER_VALID = user.ativo == status || user.nome == name;
+      if(USER_VALID)
+      {
+        newUserList.push(user);
+      }
+    }
+    this.usersList = newUserList;
   }
  
 }
