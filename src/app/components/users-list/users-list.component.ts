@@ -20,10 +20,12 @@ export class UsersListComponent {
   displayedColumns: string[] = ["name", "date", "status"];
   usersList: IUser[] = UsersList;
 
-
-  @Output() userSelected = new EventEmitter<IUser>(); 
+  @Output("userSelected") userSelectedEmitt = new EventEmitter<IUser>(); 
   onUserSelected(user : IUser)
   {
-    this.userSelected.emit(user);
+    this.userSelectedEmitt.emit(user);
   }
+
+
+ 
 }
