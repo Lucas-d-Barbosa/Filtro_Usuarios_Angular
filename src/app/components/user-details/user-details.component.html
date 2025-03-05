@@ -5,11 +5,11 @@
         </mat-list-item>
         <mat-divider></mat-divider>
         <mat-list-item role="listitem">
-            <span class="mat-title-large">Nome: </span><span class="mat-title-small">{{user.nome}}</span>
+            <span class="mat-title-large">Nome: </span><span class="mat-title-small">{{user.nome |  dashIfEmpty }}</span>
         </mat-list-item>
         <mat-divider></mat-divider>
         <mat-list-item role="listitem">
-            <span class="mat-title-large">Email: </span><span class="mat-title-small">{{ user.email }}</span>
+            <span class="mat-title-large">Email: </span><span class="mat-title-small">{{ user.email |  dashIfEmpty }}</span>
         </mat-list-item>          
         <mat-divider></mat-divider>
         <mat-list-item role="listitem">
@@ -25,12 +25,12 @@
         </mat-list-item>
         <mat-divider></mat-divider>
         <mat-list-item role="listitem">
-            <span class="mat-title-large">Função: </span><span class="mat-title-small">{{user.funcao}}</span>
+            <span class="mat-title-large">Função: </span><span class="mat-title-small">{{user.funcao |  dashIfEmpty }}</span>
         </mat-list-item>
 
         <mat-divider></mat-divider>
         <mat-list-item role="listitem">
-            <span class="mat-title-large">Data de cadastro: </span><span class="mat-title-small">{{user.dataCadastro | date: 'dd/MM/yyyy' }}</span>
+            <span class="mat-title-large">Data de cadastro: </span><span class="mat-title-small">{{user.dataCadastro | date: 'dd/MM/yyyy' |  dashIfEmpty }}</span>
         </mat-list-item>
     </mat-list>
 </div>

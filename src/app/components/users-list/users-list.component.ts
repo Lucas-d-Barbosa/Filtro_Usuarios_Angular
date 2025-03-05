@@ -21,9 +21,9 @@ export class UsersListComponent {
   usersList: IUser[] = UsersList;
 
 
-  @Output() userDetails = new EventEmitter<IUser>(); 
+  @Output() userSelected = new EventEmitter<IUser>(); 
   onUserSelected(user : IUser)
   {
-    this.userDetails.emit(user);
+    this.userSelected.emit(user);
   }
 }
